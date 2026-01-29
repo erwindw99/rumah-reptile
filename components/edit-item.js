@@ -10,7 +10,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
   //1.2 Validasi id, jika tidak ada, redirect ke index.html
   if (!idParam) {
-    window.location.href = "../index.html";
+    window.location.href = "index.html";
     return;
   }
 
@@ -26,7 +26,7 @@ window.addEventListener("DOMContentLoaded", function () {
   //1.5 Cari item berdasarkan id, jika tidak ada, redirect ke index.html
   const item = database.find((obj) => obj.id === currentItemId);
   if (!item) {
-    window.location.href = "../index.html";
+    window.location.href = "index.html";
     return;
   }
 
@@ -116,5 +116,5 @@ function updateItem() {
 
   //3.3 Simpan perubahan ke localStorage
   localStorage.setItem("database", JSON.stringify(database));
-  window.location.href = "../index.html";
+  window.location.href = "index.html";
 }
