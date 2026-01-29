@@ -27,8 +27,17 @@ function searchByName() {
 function readData(data = database) {
   let template = "";
 
+  // Format harga ke Rupiah
+  const rupiahFormatter = new Intl.NumberFormat("id-ID", {
+    style: "currency",
+    currency: "IDR",
+    minimumFractionDigits: 0,
+  });
+
   for (let i = 0; i < data.length; i++) {
     let perObject = data[i];
+
+    let formattedPrice = rupiahFormatter.format(perObject.harga);
 
     template += `
     <div class="col reptile-card">
@@ -38,7 +47,7 @@ function readData(data = database) {
             <h5 class="card-title">${perObject.nama}</h5>
             <p class="card-text">
               <strong>Stok:</strong> ${perObject.stok}<br>
-              <strong>Harga:</strong> ${perObject.harga}<br>
+              <strong>Harga:</strong> ${formattedPrice}<br>
               <strong>Deskripsi:</strong> ${perObject.deskripsi}
             </p>
             <div class="mt-auto">
