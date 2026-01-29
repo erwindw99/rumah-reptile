@@ -24,6 +24,6 @@ form.addEventListener("submit", function (e) {
   if (!valid) {
     alert("❌ Username atau password salah!");
   } else {
-    window.location.href = "/rumah-reptile/index.html";
+    window.location.href = "/rumah-reptile/pages/home.html";
   }
 });

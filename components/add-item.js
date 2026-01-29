@@ -34,8 +34,8 @@ function createData() {
       );
       clearForm();
 
-      // 1.4.1 Saat berhasil save, menambahkan re-direct ke index.html kembali
-      window.location.href = "/rumah-reptile/index.html";
+      // 1.4.1 Saat berhasil save, menambahkan re-direct ke home.html kembali
+      window.location.href = "/rumah-reptile/pages/home.html";
     };
 
     reader.readAsDataURL(inputFoto.files[0]);
@@ -53,8 +53,8 @@ function createData() {
     );
     clearForm();
 
-    // 1.5.1 Saat berhasil save, menambahkan re-direct ke index.html kembali
-    window.location.href = "/rumah-reptile/index.html";
+    // 1.5.1 Saat berhasil save, menambahkan re-direct ke home.html kembali
+    window.location.href = "/rumah-reptile/pages/home.html";
   }
 }
 
