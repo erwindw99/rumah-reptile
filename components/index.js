@@ -56,7 +56,7 @@ function readData(data = database) {
 
 // Edit data berdasarkan id
 function editData(id) {
-  window.location.href = `/rumah-reptile/pages/edit-item.html?id=${id}`;
+  window.location.href = `pages/edit-item.html?id=${id}`;
 }
 
 // Hapus data berdasarkan id
