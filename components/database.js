@@ -1,14 +1,4 @@
-// console.log("hello world!");
-
-let users = [
-  {
-    id: 1,
-    email: "admin123@gmail.com",
-    password: "12345678",
-  },
-];
-
-let database = [
+const DEFAULT_DATABASE = [
   {
     id: 1,
     nama: "Gecko",
@@ -92,4 +82,13 @@ let database = [
   },
 ];
 
-//deskripsi nya nanti statis aja
+// Load from localStorage or use default
+let database = JSON.parse(localStorage.getItem("database")) || DEFAULT_DATABASE;
+
+let users = [
+  {
+    id: 1,
+    email: "admin123@gmail.com",
+    password: "12345678",
+  },
+];
